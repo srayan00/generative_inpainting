@@ -30,7 +30,8 @@ if __name__ == "__main__":
     # mask = cv2.resize(mask, (0,0), fx=0.5, fy=0.5)
 
     assert image.shape == mask.shape
-
+    # unique, counts = np.unique(mask, return_counts=True)
+    # print(dict(zip(unique, counts)))
     h, w, _ = image.shape
     grid = 8
     image = image[:h//grid*grid, :w//grid*grid, :]
